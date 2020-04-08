@@ -1,0 +1,84 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Pyenv - Shell",
+      "type": "shell",
+      "command": "pipenv shell",
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false,
+        "revealProblems": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Django - Shell",
+      "type": "shell",
+      "command": "pipenv run python manage.py shell",
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false,
+        "revealProblems": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Celery - Worker",
+      "type": "shell",
+      "command": "pipenv run celery -A toolsbackbone worker -l info",
+      "presentation": {
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "revealProblems": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Django - Migrate",
+      "type": "shell",
+      "command": "pipenv run python manage.py migrate",
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false,
+        "revealProblems": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Django - Make Migrations",
+      "type": "shell",
+      "command": "pipenv run python manage.py makemigrations",
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false,
+        "revealProblems": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Pytest - All",
+      "type": "shell",
+      "command": "pipenv run pytest",
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false,
+        "revealProblems": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Heroku - Local Web",
+      "type": "shell",
+      "command": "pipenv run heroku local web",
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false,
+        "revealProblems": "never"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

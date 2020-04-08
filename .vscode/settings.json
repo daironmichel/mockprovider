@@ -1,0 +1,10 @@
+{
+  "python.pythonPath": "/Users/daironleyva/.virtualenvs/mockprovider--cD9Q1Up/bin/python",
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "python.linting.enabled": true
+}
