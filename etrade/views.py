@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 
+from .data import orders
 from .server import require_oauth, server
 
 
@@ -54,3 +55,10 @@ def issue_token(request):
 def user_api(request):
     user = request.oauth1_credential.user
     return JsonResponse(dict(username=user.username))
+
+
+@require_oauth()
+@csrf_exempt
+def list_orders(request):
+    user = request.oauth1_credential.user
+    return JsonResponse(orders.ORDERS_RESPONSE)
